@@ -29,7 +29,7 @@ export default function AccessCode() {
   });
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#1a1a1a] p-4 relative overflow-hidden">
+    <div className="flex min-h-screen items-center justify-center bg-[#1a1a1a] p-4 relative overflow-hidden w-full">
       {contextHolder}
       
       {/* Dekorasi Latar Belakang Mewah */}
@@ -37,10 +37,10 @@ export default function AccessCode() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#dc2626] opacity-10 blur-[120px] rounded-full" />
 
       <Card 
-        className="w-full max-w-[448px] shadow-2xl border-none backdrop-blur-sm bg-white/95"
+        className="w-full max-w-md mx-auto shadow-2xl border-none backdrop-blur-sm bg-white/95"
         style={{ 
-          borderRadius: '24px',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' 
+            borderRadius: '24px',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' 
         }}
       >
         <div className="flex flex-col items-center pt-4 mb-8">
@@ -51,7 +51,7 @@ export default function AccessCode() {
             <img src={LogoUKM} alt="Logo UKM Catur" className='h-12 w-auto object-contain rounded-lg'/>
           </div>
           
-          <Title level={3} className="text-center !m-0 font-black tracking-tight text-[#1a1a1a]">
+          <Title level={3} className="text-center m-0! font-black! tracking-tight text-[#1a1a1a]">
             E-VOTING SYSTEM
           </Title>
           <Text className="text-[#dc2626] font-bold tracking-[0.2em] text-[10px] uppercase mb-4">
@@ -74,7 +74,7 @@ export default function AccessCode() {
               size="large" 
               placeholder="••••••••" 
               prefix={<KeyOutlined className="text-[#dc2626] mr-2" />}
-              className="rounded-xl h-16 border-gray-200 bg-gray-50/30 hover:border-[#dc2626] focus:border-[#dc2626] focus:bg-white transition-all text-lg font-mono tracking-widest shadow-sm mb-2"
+              className="w-full rounded-xl h-16 border-gray-200 bg-gray-50/30 hover:border-[#dc2626] focus:border-[#dc2626] focus:bg-white transition-all text-lg font-mono tracking-widest shadow-sm mb-2"
               value={code}
               onChange={(e) => setCode(e.target.value)}
               onPressEnter={() => code && mutation.mutate(code)}

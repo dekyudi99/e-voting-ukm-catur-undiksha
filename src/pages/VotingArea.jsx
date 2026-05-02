@@ -75,7 +75,7 @@ export default function VotingArea() {
   return (
     <div className="min-h-screen bg-[#f4f4f4] pb-20">
       {/* Header Elegan */}
-      <div className="bg-[#000000] py-12 px-6 text-center shadow-lg border-b-4 border-[#dc2626] flex flex-row items-center justify-center gap-6 relative overflow-hidden">
+      <div className="bg-[#000000] py-12 px-6 text-center shadow-lg border-b-4 border-[#dc2626] flex flex-row items-center justify-center gap-6 relative overflow-hidden flex-wrap">
         <img src={LogoUndiksha} alt="Logo Undiksha" className="hidden md:flex h-24 w-auto object-contain mx-auto mb-4" />
         <div className="flex flex-col items-center justify-between">
             <Title level={2} style={{ color: '#ffffff', margin: 0 }}>
@@ -90,20 +90,20 @@ export default function VotingArea() {
         <img src={LogoUKM} alt="Logo UKM Catur" className="hidden md:flex h-24 w-auto object-contain mx-auto" />
       </div>
 
-      <div className="mx-auto max-w-6xl px-6 -mt-8">
-        <div className="grid gap-10 sm:grid-cols-2">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 -mt-8">
+        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2">
           {candidates?.map((c) => (
             <Card
               key={c.id}
               hoverable
-              className="overflow-hidden border-none shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="w-full max-w-md mx-auto overflow-hidden border-none shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               style={{ borderRadius: '24px' }}
               cover={
                 <div className="group relative group bg-[#800000]">
                   <img
                     alt={c.calon_ketua}
                     src={`${storageUrl}/${c.path_photo}`}
-                    className="h-112.5 w-full object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full max-h-[450px] object-contain grayscale-0 group-hover:grayscale-0 transition-all duration-500"
                   />
                   {/* <div className="absolute top-4 left-4">
                     <div className="bg-[#dc2626] text-white w-14 h-14 rounded-2xl flex flex-col items-center justify-center shadow-lg border-2 border-white">
