@@ -16,7 +16,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           theme={{
             token: {
               colorPrimary: '#2563eb', // Warna biru Tailwind (blue-600)
-              borderRadius: 8,
             },
           }}
         >
