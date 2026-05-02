@@ -37,7 +37,7 @@ export default function AccessCode() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#dc2626] opacity-10 blur-[120px] rounded-full" />
 
       <Card 
-        className="max-w-md shadow-2xl border-none backdrop-blur-sm bg-white/95"
+        className="w-full max-w-[448px] shadow-2xl border-none backdrop-blur-sm bg-white/95"
         style={{ 
           borderRadius: '24px',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' 
@@ -51,7 +51,7 @@ export default function AccessCode() {
             <img src={LogoUKM} alt="Logo UKM Catur" className='h-12 w-auto object-contain rounded-lg'/>
           </div>
           
-          <Title level={3} className="text-center m-0! font-black! tracking-tight text-[#1a1a1a]">
+          <Title level={3} className="text-center !m-0 font-black tracking-tight text-[#1a1a1a]">
             E-VOTING SYSTEM
           </Title>
           <Text className="text-[#dc2626] font-bold tracking-[0.2em] text-[10px] uppercase mb-4">
